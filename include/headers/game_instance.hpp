@@ -6,7 +6,7 @@
 #include <SDL_image.h>
 
 struct GameInstance {
-    GameInstance(Screen* screen);
+    GameInstance();
     ~GameInstance();
     Screen* screen;
     void clean_sdl();

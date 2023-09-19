@@ -10,10 +10,10 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    cout << "Hello world!" << endl;
-    Screen screen = Screen();
-    GameInstance game = GameInstance(&screen);
-    cout << screen.width << endl;
+    cout << "Cafe Engine Alpha" << endl;
+    GameInstance game = GameInstance();
+    SDL_RenderPresent(game.screen->renderer);
+    cout << game.screen->width << endl;
     cin.get();
     return 0;
 }
