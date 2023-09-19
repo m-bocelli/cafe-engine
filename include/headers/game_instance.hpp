@@ -9,7 +9,12 @@ struct GameInstance {
     GameInstance();
     ~GameInstance();
     Screen* screen;
+    
+    void handle_input();
+    void update();
     void clean_sdl();
+    
+    bool isGameRunning;
 };
 
 #endif

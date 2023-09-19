@@ -12,8 +12,11 @@ int main(int argc, char* argv[])
 {
     cout << "Cafe Engine Alpha" << endl;
     GameInstance game = GameInstance();
-    SDL_RenderPresent(game.screen->renderer);
-    cout << game.screen->width << endl;
-    cin.get();
+    
+    while(game.isGameRunning) {
+        game.handle_input();
+        game.update();
+    }
+
     return 0;
 }

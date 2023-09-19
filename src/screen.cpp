@@ -3,6 +3,7 @@
 
 Screen::Screen(): width(SCREEN_WIDTH), height(SCREEN_HEIGHT) {
     int window_flags, renderer_flags;
+    
     renderer_flags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
     window_flags = SDL_WINDOW_SHOWN;
 
@@ -16,8 +17,8 @@ Screen::Screen(): width(SCREEN_WIDTH), height(SCREEN_HEIGHT) {
         exit(1);
     }
 
-    window = SDL_CreateWindow("what", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, window_flags);
-
+    window = SDL_CreateWindow("Cafe Engine [Alpha]", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, window_flags);
+    
     if (!window) {
         SDL_Log("Window failed to init: %s", SDL_GetError());
         exit(1);
