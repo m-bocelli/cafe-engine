@@ -3,7 +3,7 @@
 GameInstance::GameInstance(): isGameRunning(0) {
     screen = new Screen();
     if (screen)
-        isGameRunning = true;
+        isGameRunning = 1;
 }
 
 void GameInstance::handle_input() {

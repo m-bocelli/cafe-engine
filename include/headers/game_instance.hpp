@@ -12,7 +12,6 @@ struct GameInstance {
     
     void handle_input();
     void update();
-    void clean_sdl();
     
     bool isGameRunning;
 };
